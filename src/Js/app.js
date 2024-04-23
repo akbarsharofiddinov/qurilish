@@ -128,6 +128,9 @@ var swiper = new Swiper(".resourceSwiper", {
   pagination: {
     el: ".swiper-pagination",
   },
+  autoplay: {
+    delay: 3000,
+  },
 });
 
 // To Top button

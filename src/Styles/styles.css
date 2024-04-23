@@ -9,8 +9,8 @@
 *::before {
   margin: 0;
   padding: 0;
-  outline: none;
   box-sizing: border-box;
+  outline: none;
   list-style: none;
   text-decoration: none;
 }
@@ -24,6 +24,13 @@
 html,
 body {
   font-family: "Roboto Flex", sans-serif;
+  font-weight: 400;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -1157,7 +1164,6 @@ body {
   padding: 0 10px 8px 0px;
 }
 
-
 /* To Top Button */
 
 .toTop-btn {
@@ -1179,4 +1185,24 @@ body {
 
 .toTop-btn.active {
   display: flex;
+}
+
+/* Media Query */
+
+/* --mini-phone: 320px;
+--phone: 480px;
+--large-phone: 600px;
+--tablet: 768px;
+--large-tablet: 900px;
+--mini-laptop: 1024px;
+--large-laptop: 1200px; */
+
+@media screen and (max-width: 420px) {
+  .header-top .social-links {
+    display: none;
+  }
+
+  .topInner {
+    justify-content: unset;
+  }
 }
