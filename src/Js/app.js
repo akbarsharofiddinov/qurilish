@@ -142,3 +142,7 @@ window.addEventListener("scroll", () => {
     toTopBtn.classList.remove("active");
   }
 });
+
+toTopBtn.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
