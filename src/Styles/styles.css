@@ -938,7 +938,8 @@ body {
   background-position: 50% 102%;
   background-size: 550px 350px;
   background-repeat: no-repeat;
-  padding-bottom: 40px;
+  background-attachment: scroll;
+  background-position: center end;
 }
 
 .section-administrations .section-inner {
@@ -946,6 +947,7 @@ body {
   align-items: start;
   justify-content: space-between;
   gap: 120px;
+  padding-bottom: 40px;
 }
 
 .section-administrations .info-box {
@@ -1011,18 +1013,25 @@ body {
 
 .document-section {
   background-image: url("../images/documentBg.png");
-  height: 100vh;
-  background-size: contain;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
-  padding: 120px 20px 40px 20px;
-  padding: 80px 0;
   box-shadow: 4px 4px 10px 4px rgb(128 128 128 / 5%);
+  padding: 80px 20px 40px 20px;
 }
 
-.videos-box,
+.videos-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 25px;
+  row-gap: 40px;
+  background-color: transparent;
+}
+
 .photos-box {
   display: grid;
-  grid-template-columns: repeat(4, 419px);
+  grid-template-columns: repeat(auto-fit, minmax(341px, 1fr));
   column-gap: 25px;
   row-gap: 40px;
   background-color: transparent;
@@ -1042,7 +1051,7 @@ body {
 
 .video-box .inner .playButton,
 .photos-box .inner .playButton {
-  z-index: 5;
+  z-index: 2;
   color: #715afe;
   background-color: #fff;
   border-radius: 8px;
@@ -1063,7 +1072,8 @@ body {
 .video-box img,
 .photo-box img {
   object-fit: cover;
-  max-height: 298px;
+  height: 250px;
+  width: 100%;
 }
 
 .video-box .inner::after,
@@ -1084,28 +1094,57 @@ body {
   padding-left: 5px;
 }
 
+/* ======================================================= */
+/* Usefull Resources section */
+
+.section-resources {
+  margin: 40px 0;
+}
+
+.section-resources .section-top {
+  padding: 0;
+  margin: 0;
+}
+
 .resourceSwiper {
-  padding-bottom: 40px !important;
-  padding-top: 60px !important;
-  position: relative !important;
+  padding-top: 40px !important;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 12px !important;
-  color: #fff;
+.resourceSwiper .swiper-button-next::after,
+.resourceSwiper .swiper-button-prev::after {
+  display: none;
+}
+
+.resourceSwiper .swiper-buttons div:first-child {
+  right: -40px;
   background-color: var(--main-blue-color);
-  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   border-radius: 50%;
+  top: 15px;
+  width: 24px;
+  height: 24px;
 }
 
-.resourceSwiper .swiper-button-next {
-  top: 30px;
+.resourceSwiper .swiper-buttons div:last-child {
+  left: -20px;
+  background-color: var(--main-blue-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  top: 15px;
+  width: 24px;
+  height: 24px;
 }
 
-.resourceSwiper .swiper-button-prev {
-  top: 30px;
-  left: 96% !important;
+.resourceSwiper .swiper-buttons {
+  position: absolute;
+  top: 10px;
+  right: 60px;
 }
 
 .resourceSwiper .swiper-slide {
@@ -1179,6 +1218,7 @@ body {
   justify-content: center;
   font-size: 22px;
   border: 1px solid #fff;
+  z-index: 5;
 
   position: fixed;
   bottom: 20px;
@@ -1297,8 +1337,10 @@ body {
   }
 
   .three-section .section-row {
-    grid-template-columns: repeat(1, 1fr);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
   }
 }
 
