@@ -326,6 +326,25 @@ body {
   text-align: center;
 }
 
+.baner {
+  background-image: url("https://mc.uz/images/qurilsh_bg_1920-1536x865.jpg");
+  height: 170px;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  top: 150px;
+}
+
+.baner::before {
+  content: "";
+  background-color: rgba(81, 92, 122, 0.7);
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  right: 0;
+  padding-top: 80px;
+}
+
 /* ================================================================== */
 /* Sections -------------------------------------------------------- */
 
