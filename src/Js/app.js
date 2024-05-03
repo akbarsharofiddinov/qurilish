@@ -136,6 +136,7 @@ var swiper = new Swiper(".resourceSwiper", {
 // To Top button
 
 window.addEventListener("scroll", () => {
+  console.log(window.pageYOffset)
   if (window.pageYOffset >= 200) {
     toTopBtn.classList.add("active");
   } else {
