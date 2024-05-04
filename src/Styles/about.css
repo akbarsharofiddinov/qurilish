@@ -53,6 +53,7 @@
 }
 
 .baner .baner-title {
+  text-transform: uppercase;
   position: relative;
   color: #fff;
 }
@@ -86,6 +87,10 @@
 .sidebar-menu_item a {
   padding: 6px 14px;
   color: #000;
+}
+
+.sidebar-menu_item a:hover {
+  color: var(--main-blue-color);
 }
 
 .sidebar-menu_item .active {
@@ -160,4 +165,42 @@
 
 .col-2.content a {
   color: var(--main-link-color);
+}
+
+.col-2 .member {
+  flex-direction: row !important;
+}
+
+.col-2 .member img {
+  width: 200px;
+  height: 160px;
+}
+
+.member-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.member-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.member-card-body .infos {
+  border-left: 2px dotted #ddd;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.member-card-body .infos div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.member-card-body .infos div p {
+  color: var(--main-blue-color);
 }
