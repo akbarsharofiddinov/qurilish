@@ -378,30 +378,18 @@ body {
 /* Section News ===================== */
 
 .section-news .section-inner {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 25px 0;
-  row-gap: 25px;
-  column-gap: 25px;
+  display: flex;
+  gap: 25px;
+  justify-content: end !important;
 }
 
-.section-news .section-inner .section-top {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  margin: 0;
-}
-
-.announcement-sidebar {
-  grid-row-start: 1;
-  grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 3;
+.section-news .section-top {
+  width: 77%;
 }
 
 .newsCards-box {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 100%;
   column-gap: 25px;
   row-gap: 15px;
 }
@@ -432,10 +420,6 @@ body {
   background-color: rgba(0, 0, 0, 0);
 
   transition: background-color 0.2s;
-}
-
-.ad-sidebar {
-  width: 25%;
 }
 
 .card-imageBox {
@@ -472,7 +456,7 @@ body {
 }
 
 .card-imageBox img {
-  max-width: 290px;
+  width: 100% !important;
 }
 
 .card-body {
@@ -551,7 +535,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  width: 395px;
+  max-width: 360px;
+  width: 100%;
 }
 
 .announcement.ad-1 {
@@ -566,6 +551,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   background: none;
+  margin-top: -70px;
 }
 
 .announcement.ad-1 .bg {
@@ -812,10 +798,6 @@ body {
 /* ============================================================= */
 /* Three Sections ============================================== */
 
-.three-section {
-  padding-bottom: 80px;
-}
-
 .three-section .section-row {
   display: flex;
   align-items: start;
@@ -823,19 +805,13 @@ body {
   gap: 25px;
 }
 
-.three-section .section-row .col1,
-.three-section .section-row .col2,
-.three-section .section-row .col3 {
-  width: 100%;
-}
-
 /* Q&A section ------------------------------------------------*/
 .three-section {
   background-color: #fff;
+  padding-bottom: 40px;
 }
 
 .three-section .col1 .accordions-box {
-  width: 525px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -917,6 +893,10 @@ body {
   color: #ff6384;
   font-weight: 700;
   font-size: 18px;
+}
+
+#myChart {
+  max-width: 485px !important;
 }
 
 /* =================================================-- */

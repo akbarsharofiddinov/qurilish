@@ -163,7 +163,7 @@
   font-size: 15px;
 }
 
-.col-2.content a {
+.col-2.content .rows a {
   color: var(--main-link-color);
 }
 
@@ -203,4 +203,29 @@
 
 .member-card-body .infos div p {
   color: var(--main-blue-color);
+}
+
+.rows .desc {
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 20px;
+}
+
+.rows:last-child .desc {
+  border: none;
+}
+
+/* Table */
+
+.row-2 table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.row-2 table th,
+.row-2 table td {
+  border: 1px solid black;
+}
+
+.row-2 table tbody tr:nth-child(odd) {
+  background-color: lightgray;
 }
