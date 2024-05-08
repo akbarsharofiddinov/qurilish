@@ -179,6 +179,7 @@ body {
 .header-menu {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   /* gap: 22px; */
 }
 
@@ -803,13 +804,14 @@ body {
   display: flex;
   align-items: start;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 25px;
 }
 
 /* Q&A section ------------------------------------------------*/
 .three-section {
   background-color: #fff;
-  padding-bottom: 40px;
+  padding: 0 25px 40px 25px;
 }
 
 .three-section .col1 .accordions-box {
@@ -894,10 +896,6 @@ body {
   color: #ff6384;
   font-weight: 700;
   font-size: 18px;
-}
-
-#myChart {
-  max-width: 485px !important;
 }
 
 /* =================================================-- */
@@ -1222,113 +1220,29 @@ body {
 --mini-laptop: 1024px;
 --large-laptop: 1200px; */
 
-@media screen and (max-width: 1650px) {
-  .newsCards-box {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .three-section .section-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 80px;
-    column-gap: 20px;
-  }
-}
-
-@media screen and (max-width: 1350px) {
-  .newsCards-box {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 780px) {
-  .newsCards-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .section-news .section-inner {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .section-news .section-top {
-    gap: 25px;
-  }
-
-  .newsCard {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    max-width: 350px;
-  }
-
-  .header-menu {
-    display: none;
+@media screen and (max-width: 1140px) {
+  .header-menu_item a {
+    font-size: 12px;
   }
 
   .headerTop-inner .social-links {
     display: none;
   }
 
-  .topInner {
-    justify-content: unset;
-  }
-
   .topInner .phone,
   .topInner .email,
-  .top-tools .search,
-  .top-tools .specialView {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .header-top .social-links,
-  .topInner .phone,
-  .topInner .email,
-  .top-tools .search,
-  .top-tools .specialView {
-    display: none;
-  }
-
-  .topInner {
-    justify-content: end;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .topInner {
-    transform: translateX(30px);
-  }
-
-  .topInner::after {
-    left: -50px;
-    top: -102px;
-  }
-
-  .banner-title {
-    font-size: 28px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .topInner .top-tools {
+    font-size: 12px;
+    align-items: center;
   }
 
   .three-section .section-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center !important;
-    justify-content: center !important;
+    
   }
 }
 
 @media screen and (max-width: 800px) {
-  .services-grid {
-    grid-template-columns: repeat(1, 1fr);
+  .header-menu {
+    display: none;
   }
 }
