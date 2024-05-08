@@ -142,7 +142,7 @@
 
 /* Content */
 
-.col-2.content {
+.content {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -228,4 +228,40 @@
 
 .row-2 table tbody tr:nth-child(odd) {
   background-color: lightgray;
+}
+
+/* Contact */
+
+.col-2.content .requisites .cols {
+  display: flex;
+  gap: 25px;
+  margin: 25px 0;
+}
+
+.col-2.content .requisites .desc {
+  margin: 0 35px;
+  font-size: 14px;
+}
+
+.col-2.content .requisites .cols .col-2 {
+  padding: 0 !important;
+}
+
+.col-2.content .row-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: -40px;
+}
+
+.col-2.content .cols {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  border-radius: 6px;
+  height: 75px;
 }
