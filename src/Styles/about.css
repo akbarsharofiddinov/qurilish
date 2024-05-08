@@ -255,7 +255,7 @@
   margin-top: -40px;
 }
 
-.col-2.content .cols {
+.col-2.content .row-3 .cols {
   display: flex;
   flex-direction: row;
   align-items: center;
