@@ -131,12 +131,29 @@ var swiper = new Swiper(".resourceSwiper", {
   autoplay: {
     delay: 3000,
   },
+  breakpoints: {
+    420: {
+      slidesPerView: 1,
+    },
+
+    600: {
+      slidesPerView: 2,
+    },
+
+    800: {
+      slidesPerView: 3,
+    },
+
+    1200: {
+      slidesPerView: 4,
+    },
+  },
 });
 
 // To Top button
 
 window.addEventListener("scroll", () => {
-  console.log(window.pageYOffset)
+  console.log(window.pageYOffset);
   if (window.pageYOffset >= 200) {
     toTopBtn.classList.add("active");
   } else {
