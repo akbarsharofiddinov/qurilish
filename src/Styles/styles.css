@@ -392,6 +392,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 25px;
   row-gap: 15px;
+  align-items: start;
 }
 
 .newsCard {
