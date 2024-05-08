@@ -243,6 +243,10 @@
   font-size: 14px;
 }
 
+.col-2.content .requisites .cols .reqCol {
+  width: 100%;
+}
+
 .col-2.content .requisites .cols .col-2 {
   padding: 0 !important;
 }
