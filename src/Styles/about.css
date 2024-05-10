@@ -275,3 +275,37 @@
 .col-2.content .newsCards-box {
   grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
 }
+
+/* More Info */
+
+.info-title {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.col-2.content img {
+  width: 70%;
+  margin: auto;
+}
+
+.title-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  color: #888;
+  font-size: 14px;
+}
+
+.col-2.content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.col-2.content li {
+  list-style: disc;
+  margin-left: 30px;
+}
