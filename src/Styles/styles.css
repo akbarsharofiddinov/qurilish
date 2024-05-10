@@ -429,8 +429,11 @@ body {
   border-radius: 8px 8px 0 0;
   display: flex;
   overflow: hidden;
-  max-height: 204px;
-  height: 100%;
+  height: 200px;
+}
+
+.card-imageBox img {
+  width: 100% !important;
 }
 
 .card-imageBox .image-date {
@@ -445,7 +448,7 @@ body {
 .card-imageBox .image-date p {
   background-color: gray;
   padding: 5px 13px;
-  color: #fff;
+  color: #fff !important;
   text-transform: capitalize;
 }
 
@@ -455,10 +458,6 @@ body {
 
 .image-date p:last-child {
   background-color: #d6aa51;
-}
-
-.card-imageBox img {
-  width: 100% !important;
 }
 
 .card-body {
