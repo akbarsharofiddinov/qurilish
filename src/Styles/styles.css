@@ -18,7 +18,7 @@
 }
 
 .container {
-  max-width: 1540px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 }
@@ -177,7 +177,7 @@ section {
 
 .header-inner {
   display: flex;
-  gap: 120px;
+  gap: 40px;
 }
 
 .header-menu {
