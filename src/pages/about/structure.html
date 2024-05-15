@@ -360,7 +360,7 @@
       const toTopBtn = document.querySelector(".toTop-btn");
 
       window.addEventListener("scroll", () => {
-        if (window.pageYOffset >= 100) {
+        if (window.pageYOffset >= 10) {
           headerTop.style.transform = "translateY(-100px)";
           header.style.marginTop = 0;
         } else {
@@ -372,7 +372,6 @@
       });
 
       window.addEventListener("scroll", () => {
-        console.log(window.pageYOffset);
         if (window.pageYOffset >= 200) {
           toTopBtn.classList.add("active");
         } else {

@@ -515,8 +515,7 @@
       });
 
       window.addEventListener("scroll", () => {
-        console.log(window.pageYOffset);
-        if (window.pageYOffset >= 200) {
+        if (window.pageYOffset >= 10) {
           toTopBtn.classList.add("active");
         } else {
           toTopBtn.classList.remove("active");

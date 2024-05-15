@@ -218,9 +218,7 @@
               <a href="#">MATBUOT XIZMATI</a>
               <ul class="col-1 drop-down_items">
                 <li class="drop-down_item">
-                  <a href="../news.html" class="drop-down_link"
-                    >Yangiliklar</a
-                  >
+                  <a href="../news.html" class="drop-down_link">Yangiliklar</a>
                 </li>
               </ul>
             </li>
@@ -435,8 +433,7 @@
       });
 
       window.addEventListener("scroll", () => {
-        console.log(window.pageYOffset);
-        if (window.pageYOffset >= 200) {
+        if (window.pageYOffset >= 10) {
           toTopBtn.classList.add("active");
         } else {
           toTopBtn.classList.remove("active");

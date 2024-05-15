@@ -8,7 +8,6 @@ AOS.init();
 
 if (window.innerWidth > 600) {
   window.addEventListener("scroll", () => {
-    console.log(window.innerWidth);
     if (window.pageYOffset >= 10) {
       headerTop.style.transform = "translateY(-100px)";
       header.style.marginTop = 0;
