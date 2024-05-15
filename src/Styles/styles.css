@@ -1491,6 +1491,15 @@ section {
   .footer {
     font-size: 14px;
   }
+
+  .header-top {
+    position: fixed !important;
+  }
+
+  .drop-down_items,
+  .deep-dropDown_items {
+    margin-left: 25px;
+  }
 }
 
 /* Header top Bar */

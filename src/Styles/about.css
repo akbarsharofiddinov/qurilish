@@ -330,4 +330,24 @@
   .body-row {
     margin-top: 180px;
   }
+
+  .col-2.content {
+    background-color: transparent;
+  }
+
+  .col-2.content .member {
+    flex-direction: column !important;
+    background-color: #fff;
+    align-items: center;
+  }
+
+  .col-2.content .rows.member img {
+    max-width: 380px !important;
+    width: 100%;
+    height: 300px !important;
+  }
+
+  .col-2.content .member-title {
+    font-size: 14px;
+  }
 }

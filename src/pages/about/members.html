@@ -217,9 +217,7 @@
               <a href="#">MATBUOT XIZMATI</a>
               <ul class="col-1 drop-down_items">
                 <li class="drop-down_item">
-                  <a href="../news.html" class="drop-down_link"
-                    >Yangiliklar</a
-                  >
+                  <a href="../news.html" class="drop-down_link">Yangiliklar</a>
                 </li>
               </ul>
             </li>
@@ -502,17 +500,19 @@
       const header = document.querySelector(".header");
       const toTopBtn = document.querySelector(".toTop-btn");
 
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset >= 100) {
-          headerTop.style.transform = "translateY(-100px)";
-          header.style.marginTop = 0;
-        } else {
-          headerTop.style.transform = "translateY(0)";
-          header.style.marginTop = `${
-            headerTop.getBoundingClientRect().height
-          }px`;
-        }
-      });
+      if (window.innerWidth > 600) {
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset >= 100) {
+            headerTop.style.transform = "translateY(-100px)";
+            header.style.marginTop = 0;
+          } else {
+            headerTop.style.transform = "translateY(0)";
+            header.style.marginTop = `${
+              headerTop.getBoundingClientRect().height
+            }px`;
+          }
+        });
+      }
 
       window.addEventListener("scroll", () => {
         if (window.pageYOffset >= 10) {
