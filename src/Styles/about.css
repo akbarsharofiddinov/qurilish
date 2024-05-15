@@ -168,11 +168,13 @@
 }
 
 .col-2 .member {
+  display: flex;
+  justify-content: start !important;
   flex-direction: row !important;
 }
 
 .col-2 .member img {
-  width: 200px;
+  max-width: 200px;
   height: 160px;
 }
 
@@ -286,7 +288,6 @@
 
 .col-2.content img {
   width: 70%;
-  margin: auto;
 }
 
 .title-bottom {
@@ -308,4 +309,25 @@
 .info-menu li {
   list-style: disc;
   margin-left: 30px;
+}
+
+/* Media */
+
+@media screen and (max-width: 600px) {
+  .baner {
+    display: none;
+  }
+
+  .body-row .col-1.sidebar.left {
+    display: none;
+  }
+
+  .col-2.content {
+    flex: unset !important;
+    margin-top: -200px;
+  }
+
+  .body-row {
+    margin-top: 180px;
+  }
 }

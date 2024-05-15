@@ -56,6 +56,11 @@
                 <span>РУ</span>
               </div>
             </div>
+            <div class="bar-box">
+              <button class="header-top_bar" style="display: none">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -294,7 +299,9 @@
                     Quibusdam animi incidunt quae qui tempora non repellendus!
                   </p>
                   <div class="card-bottom">
-                    <a class="card-moreInfo title" href="./MoreInfo.html">batafsil</a>
+                    <a class="card-moreInfo title" href="./MoreInfo.html"
+                      >batafsil</a
+                    >
                     <ul class="social-links">
                       <li class="social-link">
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -400,6 +407,10 @@
 
       toTopBtn.addEventListener("click", () => {
         window.scrollTo(0, 0);
+      });
+      const headerTopBar = document.querySelector(".header-top_bar");
+      headerTopBar.addEventListener("click", () => {
+        document.querySelector(".header-menu").classList.toggle("active");
       });
     </script>
   </body>

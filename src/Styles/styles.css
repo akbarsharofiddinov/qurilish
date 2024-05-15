@@ -40,6 +40,10 @@ body {
   background-color: #f2f6ff;
 }
 
+section {
+  margin: 40px 0;
+}
+
 /* =================================================================== */
 /* Header Top */
 
@@ -51,14 +55,14 @@ body {
 }
 
 .header-top {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 20;
   background-color: #fff;
 
-  transition: transform 0.2s;
+  transition: transform 0.1s;
 }
 
 .topInner {
@@ -149,13 +153,13 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   background-color: #fff;
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
   padding: 14px 0;
   z-index: 20;
 
-  transition: margin-top 0.2s;
+  transition: margin-top 0.1s;
 }
 
 .logo-box {
@@ -381,7 +385,7 @@ body {
 .section-news .section-inner {
   display: flex;
   gap: 25px;
-  justify-content: end !important;
+  justify-content: space-between;
 }
 
 .section-news .section-top {
@@ -527,17 +531,15 @@ body {
 /* ===================================================================== */
 /* Announcements - Sidebar */
 
-/* .announcement-sidebar {
-  max-width: 450px;
+.announcement-sidebar {
+  max-width: 400px;
   width: 100%;
-} */
+}
 
 .announcements-list {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  max-width: 360px;
-  width: 100%;
 }
 
 .announcement.ad-1 {
@@ -744,7 +746,7 @@ body {
 .section-services {
   margin: 40px 0 0 0;
   background-image: url("../images/services/services.jpg");
-  position: relative;
+  position: sticky;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -772,7 +774,7 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   column-gap: 25px;
   row-gap: 40px;
   z-index: 4;
@@ -780,8 +782,9 @@ body {
 
 .service-gridBox {
   display: flex;
-  gap: 15px;
   align-items: center;
+  gap: 15px;
+  width: 90%;
 }
 
 .service-gridBox img {
@@ -793,18 +796,18 @@ body {
   z-index: 2;
   font-size: 35px;
   font-weight: 500;
-  text-align: center;
+  width: 300px;
 }
 
 /* ============================================================= */
 /* Three Sections ============================================== */
 
 .three-section .section-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: start;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 25px;
+  gap: 50px;
 }
 
 /* Q&A section ------------------------------------------------*/
@@ -900,12 +903,17 @@ body {
 /* =================================================-- */
 /* col3 */
 
-.three-section .col3 .top-menu table tr {
-  display: flex;
-  gap: 80px;
+.three-section .col3 table {
+  width: 95%;
 }
 
-.three-section .col3 .top-menu table th,
+.three-section .col3 table tr {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.three-section .col3 table th,
 .three-section .col3 table select {
   font-size: 16px;
 }
@@ -986,6 +994,11 @@ body {
 
 .section-administrations .section-inner svg path.active {
   fill: var(--main-blue-color);
+}
+
+.map {
+  width: 587px;
+  height: 564px;
 }
 
 /* ======================================================== */
@@ -1249,10 +1262,252 @@ body {
   .footer-inner .links a {
     width: auto;
   }
+
+  .newsCards-box {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
 }
 
 @media screen and (max-width: 800px) {
   .header-menu {
+    transform: translateX(-100%);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 45px;
+    height: 100%;
+    z-index: 99;
+    background-color: #fff;
+    left: 0;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: start !important;
+    gap: 15px;
+    padding: 15px 0;
+
+    transition: transform 0.2s;
+  }
+
+  .header-menu .drop-down_items {
+    background-color: #fff;
+    z-index: 100;
+  }
+
+  .header-menu.active {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .newsCards-box {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header-top .phone,
+  .header-top .email,
+  .header-top .top-tools div {
     display: none;
   }
+
+  .topInner {
+    justify-content: end;
+  }
+
+  .top-tools .languages i {
+    display: none;
+  }
+
+  .top-tools .languages {
+    display: inline-block !important;
+  }
+
+  .header-inner {
+    justify-content: start;
+    padding-left: 20px;
+  }
+
+  .logo-box h1 {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .section-news .section-inner {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-news .newsCards-box {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .newsCards-box .newsCard {
+    height: 100%;
+  }
+
+  .section-news .section-top {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .section-top .title {
+    font-size: 14px !important;
+  }
+
+  .section-top button a {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+  }
+
+  .header-top_bar {
+    display: block !important;
+  }
+
+  .announcements-list {
+    max-width: 350px !important;
+    width: 100% !important;
+    margin: 0 auto;
+  }
+
+  .announcement.ad-1 {
+    margin-top: 0;
+    width: 100% !important;
+  }
+
+  .videos-box,
+  .photos-box {
+    justify-content: center;
+  }
+
+  .document-section {
+    background-image: none;
+    background-color: #fff;
+  }
+
+  .section-eSystems {
+    margin: 0 20px;
+  }
+
+  .three-section .col3 {
+    width: 100%;
+  }
+
+  .three-section .col3 table tr {
+    justify-content: space-between !important;
+  }
+
+  .map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85% !important;
+    margin-top: 40px;
+  }
+
+  .map g {
+    scale: 0.7;
+  }
+
+  .section-administrations .section-inner {
+    gap: 0;
+  }
+
+  .section-services .section-title {
+    font-size: 24px;
+    margin: 0 auto;
+  }
+
+  .section-services .service-gridBox img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .toTop-btn {
+    right: 10%;
+  }
+
+  .header {
+    position: static;
+    margin-top: 38px;
+  }
+
+  .topInner {
+    border-radius: 0;
+    padding: 12px 20px;
+  }
+
+  .topInner .languages {
+    display: flex !important;
+  }
+
+  .topInner::after {
+    display: none;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    width: 80%;
+  }
+
+  .eSystemBox .desc {
+    font-size: 14px;
+  }
+
+  .three-section .accordion button {
+    font-size: 14px;
+  }
+
+  .three-section .accordion .content {
+    font-size: 12px;
+  }
+
+  .three-section .col3 table th,
+  .three-section .col3 table select {
+    font-size: 14px !important;
+  }
+
+  .section-administrations .section-top {
+    margin: auto 25px;
+  }
+
+  .section-administrations .info-box .areaTitle {
+    font-size: 16px;
+  }
+
+  .section-administrations .info-box .body p {
+    font-size: 13px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
+
+/* Header top Bar */
+
+.bar-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  left: 15px;
+}
+
+.header-top_bar {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
 }

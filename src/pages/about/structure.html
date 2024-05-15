@@ -56,6 +56,11 @@
                 <span>РУ</span>
               </div>
             </div>
+            <div class="bar-box">
+              <button class="header-top_bar" style="display: none">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -388,6 +393,11 @@
       toTopBtn.addEventListener("click", () => {
         window.scrollTo(0, 0);
       });
+      const headerTopBar = document.querySelector(".header-top_bar");
+      headerTopBar.addEventListener("click", () => {
+        document.querySelector(".header-menu").classList.toggle("active");
+      });
     </script>
   </body>
 </html>
+

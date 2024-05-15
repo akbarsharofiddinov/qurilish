@@ -2,24 +2,24 @@ const headerTop = document.querySelector(".header-top");
 const header = document.querySelector(".header");
 const mainElement = document.querySelector(".main");
 const toTopBtn = document.querySelector(".toTop-btn");
+const headerTopBar = document.querySelector(".header-top_bar");
 
 AOS.init();
 
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset >= 100) {
-    headerTop.style.transform = "translateY(-100px)";
-    header.style.marginTop = 0;
-  } else {
-    headerTop.style.transform = "translateY(0)";
-    header.style.marginTop = `${headerTop.getBoundingClientRect().height}px`;
-  }
-});
+if (window.innerWidth > 600) {
+  window.addEventListener("scroll", () => {
+    console.log(window.innerWidth);
+    if (window.pageYOffset >= 10) {
+      headerTop.style.transform = "translateY(-100px)";
+      header.style.marginTop = 0;
+    } else {
+      headerTop.style.transform = "translateY(0)";
+      header.style.marginTop = `${headerTop.getBoundingClientRect().height}px`;
+    }
+  });
 
-header.style.marginTop = `${headerTop.getBoundingClientRect().height}px`;
-mainElement.style.marginTop = `${
-  headerTop.getBoundingClientRect().height +
-  header.getBoundingClientRect().height
-}px`;
+  header.style.marginTop = `${headerTop.getBoundingClientRect().height}px`;
+}
 
 const maps = document.querySelectorAll(".jqvmap-region");
 maps.forEach((regionMap, index) => {
@@ -132,12 +132,14 @@ var swiper = new Swiper(".resourceSwiper", {
     delay: 3000,
   },
   breakpoints: {
-    420: {
+    320: {
       slidesPerView: 1,
+      spaceBetween: 0,
     },
 
     600: {
       slidesPerView: 2,
+      spaceBetween: 10,
     },
 
     800: {
@@ -153,7 +155,6 @@ var swiper = new Swiper(".resourceSwiper", {
 // To Top button
 
 window.addEventListener("scroll", () => {
-  console.log(window.pageYOffset);
   if (window.pageYOffset >= 200) {
     toTopBtn.classList.add("active");
   } else {
@@ -163,4 +164,10 @@ window.addEventListener("scroll", () => {
 
 toTopBtn.addEventListener("click", () => {
   window.scrollTo(0, 0);
+});
+
+// Header Top Bar Button
+
+headerTopBar.addEventListener("click", () => {
+  document.querySelector(".header-menu").classList.toggle("active");
 });
