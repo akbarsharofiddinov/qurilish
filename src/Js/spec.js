@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 
+document.getElementById("spec-btn").addEventListener("click", (e) => {
+  e.target.parentNode.classList.toggle("active");
+});
+
 jQuery(document).ready(function ($) {
   $(".SpecialWindow").click(function () {
     $(".OpenSpecialWindow").slideToggle(200);
