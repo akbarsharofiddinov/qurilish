@@ -89,6 +89,11 @@
   width: 160px;
 }
 
+.varification-code_inputBox input::-webkit-inner-spin-button,
+.varification-code_inputBox input::-webkit-outer-spin-button {
+  display: none;
+}
+
 /* Submit Button */
 
 .submit-btn {

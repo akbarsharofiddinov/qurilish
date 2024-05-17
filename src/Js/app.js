@@ -170,3 +170,7 @@ toTopBtn.addEventListener("click", () => {
 headerTopBar.addEventListener("click", () => {
   document.querySelector(".header-menu").classList.toggle("active");
 });
+
+document.getElementById("spec-btn").addEventListener("click", (e) => {
+  e.target.parentNode.classList.toggle("active");
+});

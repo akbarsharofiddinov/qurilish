@@ -296,7 +296,12 @@
               <div class="phone-varification">
                 <div class="phone-inputBox">
                   <label for="phone">Telefon *</label>
-                  <input type="tel" name="phone" id="phone" />
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+998 (__) ___-__-__"
+                    autocomplete="off"
+                  />
                 </div>
                 <div class="varification-code_inputBox">
                   <label for="varifyCode">Tasdiqlash kodi *</label>
@@ -371,6 +376,7 @@
     <!-- ===================================================================== -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/imask"></script>
     <script type="module" src="../../Js/form.js"></script>
     <script>
       const headerTop = document.querySelector(".header-top");
