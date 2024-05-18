@@ -27,7 +27,7 @@ phoneInput.addEventListener("focus", (e) => {
   }, 10);
 
   IMask(phoneInput, {
-    mask: "+{998}(00)000-00-00",
+    mask: "+{998} (00) 000-00-00",
     lazy: false,
   });
 });
