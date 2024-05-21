@@ -42,6 +42,12 @@ maps.forEach((regionMap, index) => {
     maps.forEach((element, elementID) => {
       if (elementID !== index) element.classList.remove("active");
     });
+
+    const adminName = regionMap.getAttribute("data-admin");
+    document.querySelector("#admin-id").innerHTML = adminName;
+
+    const adminPhone = regionMap.getAttribute("data-admin-phone");
+    document.querySelector("#admin-phone").innerHTML = adminPhone;
   });
 });
 
