@@ -1506,6 +1506,10 @@ section {
   .deep-dropDown_items {
     margin-left: 25px;
   }
+
+  .section-resources .section-top {
+    padding: 0px 20px;
+  }
 }
 
 /* Header top Bar */
