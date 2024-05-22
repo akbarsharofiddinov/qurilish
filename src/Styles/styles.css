@@ -394,13 +394,13 @@ section {
   gap: 30px;
 }
 
+.section-news .announcement-sidebar {
+  /* transform: translateY(-60px); */
+}
+
 .section-news .section-inner {
   display: flex;
   flex-direction: column;
-}
-
-.section-news .section-inner .newsCards-box {
-  min-width: 1100px;
 }
 
 .newsCards-box {
