@@ -391,6 +391,7 @@ section {
 .section-news .container {
   display: flex;
   align-items: start;
+  justify-content: space-between;
   gap: 30px;
 }
 
@@ -401,6 +402,7 @@ section {
 .section-news .section-inner {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .newsCards-box {
