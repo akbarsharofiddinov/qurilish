@@ -44,9 +44,9 @@
               </div>
             </div>
             <div class="top-tools">
-              <div class="search">
+              <button class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
+              </button>
               <div class="specialView" id="spec-btn" style="position: relative">
                 <i class="fa-regular fa-eye"></i>
                 <div class="special-window">
@@ -1448,10 +1448,51 @@
     </footer>
 
     <!-- ==================================================================== -->
-
+    <!-- To Top Button -->
     <button class="toTop-btn"><i class="fa-solid fa-chevron-up"></i></button>
+    <!-- ==================================================================== -->
 
     <!-- ==================================================================== -->
+    <!-- Message box -->
+    <div class="message-box ">
+      <button class="close-msg">&times;</button>
+      <p class="box-title">
+        <span><i class="fa-regular fa-envelope"></i></span>
+        Отправьте нам сообщение
+      </p>
+
+      <div class="chat">
+        <div class="messages">
+          <p class="incoming-msg">
+            Здравствуйте. У вас возникли вопросы? Мы с удовольствием ответим!
+          </p>
+        </div>
+        <div class="input-box">
+          <textarea
+            name="message-input"
+            id="message-input"
+            placeholder="Введите сообщение"
+          ></textarea>
+          <button class="msg-sendBtn">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+        <div class="tools-bar">
+          <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+          <button><i class="fa-regular fa-face-smile"></i></button>
+        </div>
+      </div>
+    </div>
+    <!-- ==================================================================== -->
+
+    <!-- Search Modal -->
+    <div class="search-modal modal">
+      <div class="modal-inner">
+        <input type="search" required autocomplete="off" />
+        <button>OK</button>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script
       src="https://kit.fontawesome.com/32ee8f9848.js"

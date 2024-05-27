@@ -176,3 +176,53 @@ toTopBtn.addEventListener("click", () => {
 headerTopBar.addEventListener("click", () => {
   document.querySelector(".header-menu").classList.toggle("active");
 });
+
+// Handle Modal opening
+
+const searchBtn = document.querySelector(".search");
+const modal = document.querySelector(".modal");
+
+searchBtn.addEventListener("click", () => {
+  modal.classList.toggle("active");
+});
+
+modal.addEventListener("click", () => {
+  modal.classList.toggle("active");
+
+  const modalInner = modal.children[0];
+
+  modalInner.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+});
+
+// Message box
+
+const msgTextarea = document.querySelector("#message-input");
+msgTextarea.addEventListener("keyup", (e) => {
+  if (e.target.value.length > 0) {
+    document.querySelector(".msg-sendBtn").classList.add("active");
+  } else {
+    document.querySelector(".msg-sendBtn").classList.remove("active");
+  }
+});
+
+const msgBox = document.querySelector(".message-box");
+const closeMsgBtn = document.querySelector(".close-msg");
+
+msgBox.addEventListener("click", () => {
+  msgBox.classList.add("active");
+});
+
+closeMsgBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  msgBox.classList.remove("active");
+});
+
+// Escape event
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    modal.classList.remove("active");
+  }
+});
