@@ -137,7 +137,7 @@ var swiper = new Swiper(".resourceSwiper", {
     delay: 3000,
   },
   breakpoints: {
-    320: {
+    220: {
       slidesPerView: 1,
       spaceBetween: 0,
     },
