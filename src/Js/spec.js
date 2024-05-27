@@ -26,6 +26,7 @@ jQuery(document).ready(function ($) {
     parent.$("body *").css("fontSize", "");
     $.cookie("fontSize", parent.$("body *").css("fontSize"));
   });
+
   $("#c0").click(function () {
     parent.$("body *").css("background", "");
     parent.$("body *").css("color", "");
