@@ -1536,6 +1536,13 @@ section {
   .message-box {
     max-width: 300px !important;
   }
+
+  .toTop-btn {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 16px !important;
+    bottom: 40px;
+  }
 }
 
 /* Header top Bar */
@@ -1620,6 +1627,7 @@ section {
   cursor: pointer;
   max-width: 350px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  z-index: 999;
 }
 
 .message-box .close-msg {
