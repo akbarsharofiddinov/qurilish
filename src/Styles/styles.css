@@ -915,6 +915,17 @@ section {
   font-size: 18px;
 }
 
+.col3 table tr {
+  display: flex;
+  gap: 15px;
+}
+
+#selectRegion {
+  border: 1px solid #aaa;
+  background-color: #fff;
+  margin-right: 5px;
+}
+
 /* =================================================-- */
 /* col3 */
 
@@ -1515,6 +1526,11 @@ section {
 
   .section-resources .section-top {
     padding: 0px 20px;
+  }
+
+  .three-section .col3 table tr {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
