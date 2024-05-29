@@ -1532,6 +1532,10 @@ section {
     flex-direction: column;
     align-items: start;
   }
+
+  .message-box {
+    max-width: 300px !important;
+  }
 }
 
 /* Header top Bar */
