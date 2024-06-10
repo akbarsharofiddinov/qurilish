@@ -234,6 +234,8 @@ section {
   visibility: hidden;
   pointer-events: none;
 
+  z-index: 20;
+
   transition: transform 0.2s, opacity 0.3s;
 }
 
