@@ -1,13 +1,11 @@
-document.querySelector('.speech').addEventListener('click', () => {
-  // Get selected text
+document.addEventListener('mouseup', () => {
+  // Get the selected text
   const selectedText = window.getSelection().toString().trim();
-  
+
+  // If there is selected text, read it aloud
   if (selectedText) {
-    // Use the SpeechSynthesis API
     const utterance = new SpeechSynthesisUtterance(selectedText);
-    utterance.lang = 'ru-RU'; // Set the language (can be changed)
+    utterance.lang = 'ru-RU'; // Set language to English (US)
     speechSynthesis.speak(utterance);
-  } else {
-    alert('Пожалуйста, сначала выберите текст!');
   }
 });
