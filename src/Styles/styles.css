@@ -1785,6 +1785,7 @@ section {
   margin-top: 40px;
   width: 500px;
   display: flex;
+  gap: 5px  ;
 
   transform: translateY(-150%);
 
@@ -1807,4 +1808,5 @@ section {
   color: #fff;
   border-radius: 6px;
   padding: 8px 5px;
+  cursor: pointer;
 }

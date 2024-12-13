@@ -353,9 +353,16 @@ headerTopBar.addEventListener("click", () => {
 
 const searchBtn = document.querySelector(".search");
 const modal = document.querySelector(".modal");
+const searchClose = document.querySelector("#search-modal-close");
+const searchInput = document.querySelector("#search-input");
 
 searchBtn.addEventListener("click", () => {
   modal.classList.toggle("active");
+});
+
+searchClose.addEventListener("click", () => {
+  modal.classList.remove("active");
+  searchInput.value = "";
 });
 
 modal.addEventListener("click", () => {
