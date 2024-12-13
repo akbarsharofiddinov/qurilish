@@ -141,6 +141,14 @@ section {
   font-size: 22px;
 }
 
+.top-tools .speech {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .top-tools .search {
   background-color: transparent;
   color: #fff;
@@ -1785,7 +1793,7 @@ section {
   margin-top: 40px;
   width: 500px;
   display: flex;
-  gap: 5px  ;
+  gap: 5px;
 
   transform: translateY(-150%);
 
